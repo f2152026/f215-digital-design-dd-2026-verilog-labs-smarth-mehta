@@ -1,11 +1,7 @@
-module and_beh_intra (
-  input  a,
-  input  b,
-  output reg y
+module and_df (
+  input a,
+  input b,
+  output wire y
 );
-
-  always @(*) begin
-    y = #1 a & b;
-  end
-
+  assign #1 y = a & b;
 endmodule
